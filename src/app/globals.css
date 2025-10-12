@@ -17,20 +17,7 @@
   --font-pacifico: "Pacifico", cursive;
   --font-montserrat: "Montserrat", sans-serif;
 
-  /* Font sizes */
-  --text-display: 4rem;       /* 64px */
-  --text-title: 2.375rem;     /* 38px */
-  --text-subtitle: 2rem;      /* 31px */
-  --text-overline: 1.5rem;    /* 25px */
-  --text-body-lg: 1rem;       /* 16px */
-  --text-body-md: 0.875rem;   /* 14px */
-  --text-body-sm: 0.75rem;    /* 12px */
 }
-
-
-@import "tailwindcss";
-
-@import "tailwindcss";
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -42,5 +29,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
