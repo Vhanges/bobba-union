@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import CTAButton from "../CTAButton";
 import Link from "next/link";
 import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
@@ -9,7 +10,7 @@ export default function PublicNavbar(){
 
     return (
         <>
-            <nav className="w-full flex place-content-between items-end bg-color-primary py-3 px-5 md:px-[100px] ">
+            <nav className="w-full flex place-content-between items-end bg-color-primary py-3 px-5 lg:px-[50px] ">
 
                 {
                     /**
@@ -32,15 +33,26 @@ export default function PublicNavbar(){
                     </h3>
                 </span>
 
+                <nav className="hidden lg:flex gap-8 p-4">
+                    <Link href="/" className="text-xl md:text-base font-semibold">About Us</Link>
+                    <Link href="/" className="text-xl md:text-base font-semibold">Flavours</Link>
+                    <Link href="/" className="text-xl md:text-base font-semibold">Contact Us</Link>
+                    <Link href="/" className="text-xl md:text-base font-semibold">Our Location</Link>
+                </nav>
+
+                <CTAButton href="/" className="hidden lg:block text-xl p-4">
+                    Order Now
+                </CTAButton>
+            
+
                 {
                     /**
                      * Mobile Menu
                      */
                 }
-                <span className="inline md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                <span className="inline lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <List
-                        size={32}
-                        className={`${isOpen ? "hidden": "visible"  }`}
+                    className={`${isOpen ? "hidden" : "block"} w-6 h-6 md:w-12 md:h-12 md:pb-2.5`}
                     />
                 </span>
             </nav>
