@@ -10,7 +10,7 @@ export default function PublicNavbar(){
 
     return (
         <>
-            <nav className="w-full flex place-content-between items-end bg-color-primary py-3 px-5 lg:px-[50px] xl:px-[100px]">
+            <nav className="w-full sticky top-0 z-50 flex place-content-between items-end bg-background py-3 px-5 lg:px-[50px] xl:px-[100px]">
 
                 {
                     /**
