@@ -12,7 +12,7 @@ export default function HeroSection(){
                  * Medium to Large Media 
                  */
             }
-            <div className="h-[600px] w-full hidden relative md:flex items-center justify-between px-[50px]">
+            <div className="h-[600px] w-full hidden relative md:flex items-center justify-between px-5 lg:px-[50px] xl:px-[100px]">
                 {
                     // Hero Text and CTA Button
                 }
@@ -39,9 +39,9 @@ export default function HeroSection(){
                     <Image
                         src="/assets/images/hero-image.png"
                         alt="Hero Product"
-                        width={350}
+                        width={400}
                         height={700}
-                        className="absolute right-50 md:right-0 bottom-10 -rotate-12"
+                        className="absolute right-50 md:right-0 bottom-3 -rotate-15"
                         style={{ animation: 'slideUp 0.8s ease-out forwards' }}
                     />
                 </div>
