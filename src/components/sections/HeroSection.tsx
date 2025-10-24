@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import CTAButton from "../CTAButton";
 
@@ -12,7 +10,7 @@ export default function HeroSection(){
                  * Medium to Large Media 
                  */
             }
-            <div className="h-[600px] w-full hidden relative md:flex items-center justify-between px-5 lg:px-[50px] xl:px-[100px]">
+            <section className="h-[600px] w-full hidden relative md:flex items-center justify-between pt-20 px-5 lg:px-[50px] xl:px-[100px] overflow-hidden">
                 {
                     // Hero Text and CTA Button
                 }
@@ -20,12 +18,12 @@ export default function HeroSection(){
                     <h1 className="text-5xl text-primary font-extrabold">    
                         Your Daily Dose of
                     </h1>
-                    <h3 className="text-5xl text-primary font-pacifico">
+                    <h2 className="text-5xl text-primary font-pacifico">
                         Creamy Goodness
-                    </h3>
-                    <h3 className="text-3xl mt-7 font-bold">
+                    </h2>
+                    <p className="text-3xl mt-7 font-bold">
                         Refreshing, creamy, and <br/> irresistibly smooth.
-                    </h3>
+                    </p>
                     
                     <CTAButton href="/" className="text-2xl text-center w-100 p-y[20px] px-[100px] mt-10">
                         Explore More
@@ -37,15 +35,17 @@ export default function HeroSection(){
                 }
                 <div className="h-full flex-1 relative">
                     <Image
-                        src="/assets/images/hero-image.png"
-                        alt="Hero Product"
-                        width={400}
-                        height={700}
-                        className="absolute right-50 md:right-0 bottom-3 -rotate-15"
-                        style={{ animation: 'slideUp 0.8s ease-out forwards' }}
+                    src="/assets/images/hero-image.png"
+                    alt="Hero Product"
+                    width={380}
+                    height={700}
+                    priority 
+                    sizes="(max-width: 768px) 300px, 380px"
+                    className="absolute right-0 bottom-3 -rotate-15"
+                    style={{ animation: 'slideUp 0.8s ease-out forwards' }}
                     />
                 </div>
-            </div>
+            </section>
 
 
             {
@@ -53,17 +53,17 @@ export default function HeroSection(){
                  * Small Media 
                  */
             }
-            <div className="h-[700px] relative flex flex-col md:hidden justify-center items-start py-3 px-5 pb-[150px] gap-2 mt-10 overflow-hidden">
+            <section className="h-[700px] relative flex flex-col md:hidden justify-center items-start py-3 px-5 pb-[100px] gap-2 overflow-hidden">
                 <h1 className="text-5xl text-primary font-extrabold">    
                     Your Daily <br/> Dose of
                 </h1>
-                <h3 className="text-2xl text-primary font-pacifico">
+                <h2 className="text-2xl text-primary font-pacifico">
                     Creamy Goodness
-                </h3>
+                </h2>
 
-                <h3 className="text-xl mt-7 font-bold">
+                <p className="text-xl mt-7 font-bold">
                     Refreshing, creamy, and <br/> irresistibly smooth.
-                </h3>
+                </p>
 
                 <CTAButton href="/" className="w-70 px-5 mt-10">
                     Explore More
@@ -74,9 +74,10 @@ export default function HeroSection(){
                     alt="Hero Product"
                     width={300}
                     height={490}
+                    priority 
                     className="absolute -right-47"
                 />
-            </div>           
+            </section>           
         </>
     );
 }
