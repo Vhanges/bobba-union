@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat, Pacifico } from "next/font/google";
 import "./globals.css";
 
@@ -19,6 +19,13 @@ const pacifico = Pacifico({
 export const metadata: Metadata = {
   title: "Bobba Union",
   description: "Your Daily Dose of Creamy Goodness",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
