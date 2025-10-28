@@ -9,7 +9,7 @@ export default function LatestCreationsSection(){
                     <h1 className="text-5xl text-primary text-center font-extrabold">    
                         Our Latest Creations
                     </h1>
-                    <h3 className="text-xl text-center font-bold mt-7">
+                    <h3 className="text-3xl text-center font-bold mt-7">
                         New blends, new experiences—crafted to delight every sip.
                     </h3>
                 </span> 
