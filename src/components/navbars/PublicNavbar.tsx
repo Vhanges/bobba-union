@@ -62,7 +62,7 @@ export default function PublicNavbar(){
                  * Off-canvas nav
                  */
             }
-            <div className={`z-10 fixed top-0 right-0 h-full w-full flex flex-col gap-5 py-5 px-3 bg-background transform transition-transform duration-300
+            <div className={`z-100 fixed top-0 right-0 h-full w-full flex flex-col gap-5 py-5 px-3 bg-background transform transition-transform duration-300
                 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
 
                 {
@@ -98,7 +98,7 @@ export default function PublicNavbar(){
                      *  Nav Links
                      */
                 }
-                <nav className="flex flex-col gap-8 p-4">
+                <nav className="flex flex-col gap-8 p-4 mt-10">
                     <Link href="/" className="text-3xl font-semibold">About Us</Link>
                     <Link href="/" className="text-3xl font-semibold">Flavours</Link>
                     <Link href="/" className="text-3xl font-semibold">Contact Us</Link>
