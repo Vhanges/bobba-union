@@ -10,13 +10,12 @@ export default function HeroSection(){
                  * Medium to Large Media 
                  */
             }
-            <section className="h-[600px] w-full hidden relative md:flex items-center justify-between pt-20 px-5 lg:px-[50px] xl:px-[100px] overflow-hidden">
+            <section className="h-[600px] w-full hidden relative md:flex items-center justify-around pt-20 px-5 lg:px-[50px] xl:px-[100px] overflow-hidden">
                 {
                     // Hero Text and CTA Button
                 }
                 <div className="flex-1 flex flex-col">
-                    <h1 className="text-5xl text-primary font-extrabold">    
-                        Your Daily Dose of
+                    <h1 className="text-5xl text-primary font-extrabold">     
                     </h1>
                     <h2 className="text-5xl text-primary font-pacifico">
                         Creamy Goodness
