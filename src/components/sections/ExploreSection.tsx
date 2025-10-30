@@ -13,7 +13,7 @@ export default function ExploreSection(){
 
                 <div className="flex flex-col justify-around gap-[40px] md:gap-[150px] ">
                     <OfferingCard
-                        imgSrc="/assets/images/offer-image.png"
+                        imgSrc="/assets/images/offer-image-2.png"
                         title="Reliable Equipment for Better Results"
                         description="
                             We use high-quality tools to make work easier,
@@ -32,7 +32,7 @@ export default function ExploreSection(){
                         isReversed={true}
                     />
                     <OfferingCard
-                        imgSrc="/assets/images/offer-image-2.png"
+                        imgSrc="/assets/images/offer-image.png"
                         title="Meet the Team Behind the Excellence"
                         description="
                             Our skilled and passionate team is the heart of everything we do.
