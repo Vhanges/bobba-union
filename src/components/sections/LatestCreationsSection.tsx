@@ -3,7 +3,6 @@ import ProductCard from "../products/ProductCard";
 
 export default function LatestCreationsSection(){
     return (
-        <>
             <section className="h-auto relative flex flex-col justify-start items-center py-5 px-5 md:pt-20 pb-[150px] gap-[140px] overflow-hidden">
                 <span className="block">
                     <h1 className="text-5xl text-primary text-center font-extrabold">    
@@ -20,6 +19,5 @@ export default function LatestCreationsSection(){
                     <ProductCard/>
                 </div>
             </section>
-        </>
     );
 }
