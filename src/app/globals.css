@@ -8,7 +8,7 @@
 
 @theme inline {
   /* Colors */
-  --color-primary: #B17457;
+  --color-primary: #9A6046;
   --color-accent: #D8D2C2;
   --color-text: #4A4947;
   --color-background: #FAF7F0;
@@ -23,7 +23,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #F4F4F4;
   }
 }
 
