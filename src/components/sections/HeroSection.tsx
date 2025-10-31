@@ -10,42 +10,42 @@ export default function HeroSection(){
                  * Medium to Large Media 
                  */
             }
-            <section className="h-[600px] w-full hidden relative md:flex items-center justify-around pt-20 px-5 lg:px-[50px] xl:px-[100px] overflow-hidden">
-                {
-                    // Hero Text and CTA Button
-                }
-                <div className="flex-1 flex flex-col">
-                    <h1 className="text-5xl text-primary font-extrabold">     
-                        Your Daily Dose of
-                    </h1>
-                    <h2 className="text-5xl text-primary font-pacifico">
-                        Creamy Goodness
-                    </h2>
-                    <p className="text-3xl mt-7 font-bold">
-                        Refreshing, creamy, and <br/> irresistibly smooth.
-                    </p>
+            <section className="h-full w-full hidden relative md:grid place-items-center justify px-5 lg:px-[50px] xl:px-[100px] overflow-hidden">
+                <div className="grid grid-cols-[625px_550px] gap-10">
                     
-                    <CTAButton href="/" className="text-2xl text-center w-100 p-y[20px] px-[100px] mt-10">
-                        Explore More
-                    </CTAButton>
-                </div>
+                    {/* Hero Text and CTA */}
+                    <div className="flex flex-col justify-center">
+                        <h1 className="text-6xl text-primary font-extrabold">     
+                            Your Daily Dose of
+                        </h1>
+                        <h2 className="text-6xl text-primary font-pacifico mt-3">
+                            Creamy Goodness
+                        </h2>
+                        <p className="text-3xl mt-7 font-bold">
+                            Refreshing, creamy, and <br/> irresistibly smooth.
+                        </p>
+                        <CTAButton href="/" className="text-2xl text-center py-[20px] px-[50px] mt-10">
+                            Explore More
+                        </CTAButton>
+                    </div>
 
-                {
-                    // Hero Image
-                }
-                <div className="h-full flex-1 relative">
-                    <Image
-                    src="/assets/images/hero-image.png"
-                    alt="Hero Product"
-                    width={380}
-                    height={700}
-                    priority 
-                    sizes="(max-width: 768px) 300px, 380px"
-                    className="absolute right-0 bottom-3 -rotate-15"
-                    style={{ animation: 'slideUp 0.8s ease-out forwards' }}
-                    />
+                    {/* Hero Image */}
+                    <div className="relative h-[600px] w-[550px]">
+                        <Image
+                            src="/assets/images/hero-image.png"
+                            alt="Hero Product"
+                            width={350}
+                            height={350}
+                            priority
+                            quality={85}
+                            className="absolute -right-2 bottom-15 -rotate-15 object-contain"
+                            style={{ animation: 'slideUp 0.8s ease-out forwards' }}
+                        />
+                    </div>
+
                 </div>
             </section>
+
 
 
             {
