@@ -12,7 +12,7 @@ export default function TestimonialsSection(){
             <div className="h-auto w-full flex flex-row justify-center gap-10 md:gap-[25px] lg:gap-[50px] overflow-x-auto scrollbar-hide">
                 <TestimonialCard imgSrc="/assets/images/offer-image-2.png">
                     <p className="w-full text-xl text-white line-clamp-3">
-                        We never knew coffee could taste this smooth until we tried Bobba Union Every
+                        We never knew coffee could taste this smooth until we tried <strong>Bobba Union</strong> Every
                         cup feels like a tiny morning ritual — rich, bold, and beautifully balanced.
                         We&apos;ve stopped going to cafes because now my favorite brew is just a kitchen away
                     </p>
@@ -26,7 +26,7 @@ export default function TestimonialsSection(){
                 </TestimonialCard>
                 <TestimonialCard imgSrc="/assets/images/offer-image-2.png">
                     <p className="w-full text-xl text-white line-clamp-3">
-                        Each cup from Bobba Union feels like a cozy morning hug.
+                        Each cup from <strong>Bobba Union</strong> feels like a cozy morning hug.
                         The aroma alone makes me slow down and savor the moment &mdash; it&rsquo;s
                         not just coffee, it&rsquo;s my daily pause.
 
