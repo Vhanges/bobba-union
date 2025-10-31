@@ -16,6 +16,7 @@ export default function HeroSection(){
                 }
                 <div className="flex-1 flex flex-col">
                     <h1 className="text-5xl text-primary font-extrabold">     
+                        Your Daily Dose of
                     </h1>
                     <h2 className="text-5xl text-primary font-pacifico">
                         Creamy Goodness
