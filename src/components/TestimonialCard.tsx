@@ -9,12 +9,12 @@ type TestimonialCardProps = {
 export default function TestimonialCard({imgSrc, children}: TestimonialCardProps){
     return(
         <div className="w-[300px] min-w-[300px] md:w-[400px] flex flex-col gap-5">
-            <div className="relative w-full h-[250px] shrink-0 rounded-2xl border-5 border-primary overflow-hidden">
+            <div className="relative w-full h-[250px]  aspect-[3/1] shrink-0 rounded-2xl border-5 border-primary overflow-hidden">
                 <Image
                     src={imgSrc}
                     alt="Bobba Union Logo"
                     fill
-                    className="-z-1 object-fill"
+                    className="-z-1 object-hidden"
                     priority
                 />
             </div>
