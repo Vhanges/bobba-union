@@ -4,7 +4,7 @@ import CTAButton from '../CTAButton';
 export default function JoinUsSection(){
     return(
         <section className="w-full flex flex-col-reverse lg:flex-row justify-center items-center gap-10 p-[50px] pb-[150px]">
-            <div className="w-[620px] flex flex-col">
+            <div className="w-auto flex flex-col">
                 <h1 className="text-4xl md:text-5xl text-primary font-extrabold leading-tight">
                 Join the Bobba <br /> Union Family &mdash; <br /> Start Your Franchise <br /> Today!
                 </h1>
@@ -12,7 +12,7 @@ export default function JoinUsSection(){
                 href="/"
                 className="text-lg md:text-2xl text-center w-auto py-[20px] mt-10"
                 >
-                Let’s Brew Success Together !
+                Let’s Brew Success Together!
                 </CTAButton>
             </div>
             <Image
