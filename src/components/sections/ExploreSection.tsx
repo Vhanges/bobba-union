@@ -13,7 +13,7 @@ export default function ExploreSection(){
 
                 <div className="flex flex-col justify-around gap-[40px] md:gap-[150px] ">
                     <OfferingCard
-                        imgSrc="/assets/images/offer-image-2.png"
+                        imgSrc="/assets/images/offer-image-2.webp"
                         title="Reliable Equipment for Better Results"
                         description="
                             We use high-quality tools to make work easier,
@@ -22,7 +22,7 @@ export default function ExploreSection(){
                         isReversed={false}
                     />
                     <OfferingCard
-                        imgSrc="/assets/images/offer-image-1.png"
+                        imgSrc="/assets/images/offer-image-1.webp"
                         title="Fresh, Premium Ingredients for Perfect Flavor"
                         description="
                             We source only the finest ingredients to ensure
@@ -32,7 +32,7 @@ export default function ExploreSection(){
                         isReversed={true}
                     />
                     <OfferingCard
-                        imgSrc="/assets/images/offer-image.png"
+                        imgSrc="/assets/images/offer-image.webp"
                         title="Meet the Team Behind the Excellence"
                         description="
                             Our skilled and passionate team is the heart of everything we do.

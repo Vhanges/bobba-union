@@ -18,7 +18,7 @@ export default function ProductCard(){
             }
             <div className="w-[300px] h-auto relative hidden lg:flex items-center flex-col bg-primary px-6 py-6 gap-5 rounded-bl-2xl rounded-br-2xl rounded-tl-[100px] rounded-tr-[100px]">
                 <Image
-                    src="/assets/images/product.png"
+                    src="/assets/images/product.webp"
                     alt="Bobba Union Logo"
                     width={250}
                     height={300}
@@ -56,7 +56,7 @@ export default function ProductCard(){
             }
             <div className="w-[300px] md:w-[200px] h-auto relative flex lg:hidden items-center flex-col bg-primary px-6 md:px-3 py-6 gap-5 rounded-bl-2xl rounded-br-2xl rounded-tl-[100px] rounded-tr-[100px]">
                 <Image
-                    src="/assets/images/product.png"
+                    src="/assets/images/product.webp"
                     alt="Bobba Union Logo"
                     width={170}
                     height={300}

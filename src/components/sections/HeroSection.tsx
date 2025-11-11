@@ -32,7 +32,7 @@ export default function HeroSection(){
                     {/* Hero Image */}
                     <div className="relative h-[600px] w-[550px]">
                         <Image
-                            src="/assets/images/hero-image.png"
+                            src="/assets/images/hero-image.webp"
                             alt="Hero Product"
                             width={350}
                             height={350}
@@ -70,7 +70,7 @@ export default function HeroSection(){
                 </CTAButton>
 
                 <Image
-                    src="/assets/images/hero-image.png"
+                    src="/assets/images/hero-image.webp"
                     alt="Hero Product"
                     width={300}
                     height={490}

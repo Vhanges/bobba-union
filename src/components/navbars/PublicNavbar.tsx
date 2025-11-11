@@ -20,7 +20,7 @@ export default function PublicNavbar(){
                 <span className="flex gap-1 items-end">  
                     <div className="relative w-[42px] h-[42px] md:w-[84px] md:h-[84px]">
                         <Image
-                            src="/assets/images/logo.png"
+                            src="/assets/images/logo.webp"
                             alt="Bobba Union Logo"
                             fill
                             style={{
@@ -74,7 +74,7 @@ export default function PublicNavbar(){
                     <span className="flex gap-1 items-end">  
                         <div className="relative w-[42px] h-[42px] md:w-[84px] md:h-[84px]">
                             <Image
-                                src="/assets/images/logo.png"
+                                src="/assets/images/logo.webp"
                                 alt="Bobba Union Logo"
                                 fill
                                 style={{
@@ -123,7 +123,7 @@ export default function PublicNavbar(){
                     </h3>
 
                     <Image
-                        src="/assets/images/hero-image.png"
+                        src="/assets/images/hero-image.webp"
                         alt="Hero Product"
                         width={200}
                         height={330}

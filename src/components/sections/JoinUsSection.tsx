@@ -16,7 +16,7 @@ export default function JoinUsSection(){
                 </CTAButton>
             </div>
             <Image
-                src="/assets/images/bobba-union_building.png"
+                src="/assets/images/bobba-union_building.webp"
                 alt="Hero Product"
                 width={550}
                 height={500}
