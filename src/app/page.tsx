@@ -6,6 +6,7 @@ import JoinUsSection from "@/components/sections/JoinUsSection";
 import LatestCreationsSection from "@/components/sections/LatestCreationsSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import SocialsSection from "@/components/sections/SocialsSection";
+import FooterSection from "@/components/sections/FooterSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <TestimonialsSection/>
         <JoinUsSection/>
         <SocialsSection/>
+        <FooterSection/>
       </main>
     </>
   );
