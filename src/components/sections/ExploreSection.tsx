@@ -1,4 +1,3 @@
-"use client";
 import OfferingCard from "../OfferingCard";
 
 export default function ExploreSection(){

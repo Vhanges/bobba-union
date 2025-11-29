@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CTAButton from "../CTAButton";
+import FloatingBobba from "../FloatingBobba";
 
 export default function HeroSection(){
     return (
@@ -11,6 +12,19 @@ export default function HeroSection(){
                  */
             }
             <section className="h-full w-full hidden relative md:grid place-items-center justify px-5 lg:px-[50px] xl:px-[100px] overflow-hidden">
+                
+                <FloatingBobba
+                    className="rotating-bounce top-14 right-[500px]"
+                />
+
+                <FloatingBobba
+                    className="rotating-bounce bottom-20 right-[400px]"
+                />
+
+                <FloatingBobba
+                    className="rotating-bounce top-40 right-[100px]"
+                />
+
                 <div className="grid grid-cols-[625px_550px] gap-10">
                     
                     {/* Hero Text and CTA */}
@@ -38,8 +52,7 @@ export default function HeroSection(){
                             height={350}
                             priority
                             quality={85}
-                            className="absolute -right-2 bottom-15 -rotate-15 object-contain"
-                            style={{ animation: 'slideUp 0.8s ease-out forwards' }}
+                            className="absolute -right-2 bottom-15 -rotate-15 object-contain slide-up"
                         />
                     </div>
 
