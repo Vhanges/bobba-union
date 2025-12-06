@@ -2,7 +2,13 @@ import Image from "next/image";
 import CTAButton from "../CTAButton";
 import FloatingBobba from "../FloatingBobba";
 
-export default function HeroSection(){
+type HeroSectionProps = {
+    className ?: string;
+}
+
+export default function HeroSection(
+    {className}: HeroSectionProps
+){
     return (
         <>
 
@@ -11,7 +17,7 @@ export default function HeroSection(){
                  * Medium to Large Media 
                  */
             }
-            <section className="h-full w-full hidden relative md:grid place-items-center justify px-5 lg:px-[50px] xl:px-[100px] overflow-hidden">
+            <section className={`"w-full hidden relative md:grid place-items-center justify px-5 lg:px-[50px] xl:px-[100px] overflow-hidden" ${className ?? ''}`}>
                 
                 <FloatingBobba
                     className="rotating-bounce top-14 right-[500px]"

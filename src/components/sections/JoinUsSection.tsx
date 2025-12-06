@@ -1,9 +1,13 @@
 import Image from 'next/image'
 import CTAButton from '../CTAButton';
 
-export default function JoinUsSection(){
+type JoinUsSectionProps = {
+    className?: string;
+}
+
+export default function JoinUsSection({ className }: JoinUsSectionProps){
     return(
-        <section className="w-full flex flex-col-reverse lg:flex-row justify-center items-center gap-10 p-[50px] pb-[150px]">
+        <section className={`w-full flex flex-col-reverse lg:flex-row justify-center items-center gap-10 p-[50px] pb-[150px] ${className ?? ''}`}>
             <div className="w-auto flex flex-col">
                 <h1 className="text-4xl md:text-5xl text-primary font-extrabold leading-tight">
                 Join the Bobba <br /> Union Family &mdash; <br /> Start Your Franchise <br /> Today!

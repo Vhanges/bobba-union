@@ -6,13 +6,15 @@ import TextInputField from "../TextInputField";
 import Button from "../Button";
 import { CoffeeBeanIcon } from "@phosphor-icons/react";
 
+type FooterSectionProps = {
+    className?: string;
+}
 
-
-export default function FooterSection(){
+export default function FooterSection({ className }: FooterSectionProps){
     const [newsletter, setNewsletter] = useState("");
 
     return (
-        <section className="h-auto w-full relative flex flex-col justify-center items-center bg-primary px-5 py-[50px] md:px-[50px] gap-10">
+        <section className={`h-auto w-full relative flex flex-col justify-center items-center bg-primary px-5 py-[50px] md:px-[50px] gap-10 ${className ?? ''}`}>
             {
                 /**
                  * Footer HEading

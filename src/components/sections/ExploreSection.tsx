@@ -1,9 +1,13 @@
 import OfferingCard from "../OfferingCard";
 
-export default function ExploreSection(){
+type ExploreSectionProps = {
+    className?: string;
+}
+
+export default function ExploreSection({ className }: ExploreSectionProps){
     return (
         <>
-            <section className="h-auto relative flex flex-col justify-start items-center py-5 px-[20px] md:px-[100px] lg:px-[50px] md:pt-20 pb-[150px] gap-[50px] md:gap-[150px] overflow-hidden">
+            <section className={`h-auto relative flex flex-col justify-start items-center py-5 px-[20px] md:px-[100px] lg:px-[50px] md:pt-20 pb-[150px] gap-[50px] md:gap-[150px] overflow-hidden ${className ?? ''}`}>
                 <span className="block">
                     <h1 className="text-5xl text-primary text-center font-extrabold">    
                         Explore What&apos;s inside

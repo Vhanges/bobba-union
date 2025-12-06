@@ -21,17 +21,62 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #F4F4F4;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-montserrat), sans-serif;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+.rotating {
+  animation: rotating 2s linear infinite;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.slide-up-delayed {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideUpBounce 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.rotating-bounce {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideUpBounce 2s ease-in-out forwards, rotating 2s linear infinite;
+  animation-delay: 0.8s, 1.5s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #F4F4F4;
+  }
 }
 
 @keyframes slideUp {
@@ -81,24 +126,3 @@ body {
   }
 }
 
-.rotating {
-  animation: rotating 2s linear infinite;
-}
-
-.slide-up {
-  animation: slideUp 0.8s ease-out forwards;
-}
-
-.slide-up-delayed {
-  opacity: 0;
-  transform: translateY(100%);
-  animation: slideUpBounce 0.8s ease-out forwards;
-  animation-delay: 0.8s;
-}
-
-.rotating-bounce {
-  opacity: 0;
-  transform: translateY(100%);
-  animation: slideUpBounce 2s ease-in-out forwards, rotating 2s linear infinite;
-  animation-delay: 0.8s, 1.5s;
-}

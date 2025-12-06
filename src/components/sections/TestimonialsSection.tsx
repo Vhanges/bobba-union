@@ -1,8 +1,12 @@
 import TestimonialCard from "../TestimonialCard";
 
-export default function TestimonialsSection(){
+type TestimonialsSectionProps = {
+    className?: string;
+}
+
+export default function TestimonialsSection({ className }: TestimonialsSectionProps){
     return(
-        <section className="h-auto relative flex flex-col justify-start items-center py-5 px-5 md:pt-20 pb-[150px] gap-[140px] overflow-hidden">
+        <section className={`h-auto relative flex flex-col justify-start items-center py-5 px-5 md:pt-20 pb-[150px] gap-[140px] overflow-hidden ${className ?? ''}`}>
             <span className="block">
                 <h1 className="text-5xl text-primary text-center font-extrabold">    
                     Customer Feedback

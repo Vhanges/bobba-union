@@ -1,9 +1,13 @@
 "use client";
 import { FacebookLogoIcon, InstagramLogoIcon, TiktokLogoIcon, XLogoIcon,  } from "@phosphor-icons/react";
 
-export default function SocialsSection(){
+type SocialsSectionProps = {
+    className?: string;
+}
+
+export default function SocialsSection({ className }: SocialsSectionProps){
     return (
-            <section className="h-auto relative flex flex-col justify-start items-center py-5 px-5 md:pt-20 pb-[150px] gap-[140px] overflow-hidden">
+            <section className={`h-auto relative flex flex-col justify-start items-center py-5 px-5 md:pt-20 pb-[150px] gap-[140px] overflow-hidden ${className ?? ''}`}>
                 <span className="block">
                     <h1 className="text-5xl text-primary text-center font-extrabold">    
                         We’d love to hear from you
