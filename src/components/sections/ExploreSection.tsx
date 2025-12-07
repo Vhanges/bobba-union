@@ -22,7 +22,7 @@ export default function ExploreSection({ className }: ExploreSectionProps){
                             We use high-quality tools to make work easier,
                             faster, and more efficient—helping you achieve 
                             the best possible outcome with every task."
-                        isReversed={false}
+                        sectionClassName="offering-card-1"
                     />
                     <OfferingCard
                         imgSrc="/assets/images/offer-image-1.webp"
@@ -32,7 +32,8 @@ export default function ExploreSection({ className }: ExploreSectionProps){
                             rich taste, superior quality, and consistency in every creation.
                             Carefully selected for freshness and excellence, our ingredients 
                             bring out the best in cup."
-                        isReversed={true}
+                        isReversed
+                        sectionClassName="offering-card-reversed-1"
                     />
                     <OfferingCard
                         imgSrc="/assets/images/offer-image.webp"
@@ -42,7 +43,7 @@ export default function ExploreSection({ className }: ExploreSectionProps){
                             With expertise, dedication, and a commitment to quality, they ensure
                             every experience is seamless and exceptional. Trust in the people 
                             who make it all possible."
-                        isReversed={false}
+                        sectionClassName="offering-card-2"
                     />
                 </div>
             </section>

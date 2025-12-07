@@ -1,13 +1,14 @@
 import Image from "next/image";
 
 type OfferingCardProps = {
-    imgSrc: string,
-    title: string,
-    description: string,
-    isReversed: boolean
+    imgSrc : string,
+    title : string,
+    description : string,
+    isReversed ?: boolean,
+    sectionClassName ?: string
 }
 
-export default function OfferingCard( {imgSrc, title, description, isReversed}: OfferingCardProps){
+export default function OfferingCard( {imgSrc, title, description, isReversed, sectionClassName}: OfferingCardProps){
     return(
         <>
             {
@@ -15,7 +16,7 @@ export default function OfferingCard( {imgSrc, title, description, isReversed}: 
                  *  Large Media
                  */
             }
-            <div className={`lg:w-[900px] xl:w-[1100px] hidden lg:flex items-center justify-center gap-20 ${isReversed ? "flex-row-reverse" : "flex-row" }`}>
+            <div className={`lg:w-[900px] xl:w-[1100px] hidden lg:flex items-center justify-center gap-20 ${sectionClassName ?? ''} ${isReversed ? "flex-row-reverse" : "flex-row" }`}>
                 <div className="relative w-[500px] h-[450px] shrink-0 rounded-2xl border-5 border-primary overflow-hidden">
                     <Image
                         src={imgSrc}
