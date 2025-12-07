@@ -3,12 +3,20 @@ import Image from "next/image";
 import { ShoppingCartSimpleIcon } from "@phosphor-icons/react";
 
 type ProductCardProps = {
-    name: string,
-    currency: string,
-    price: number,
+    name?: string,
+    currency?: string,
+    price?: number,
+    containerClassName ?: string,
+    imageClassName ?: string,
 }
 
-export default function ProductCard(){
+export default function ProductCard({
+    name,
+    currency,
+    price,
+    containerClassName,
+    imageClassName
+}: ProductCardProps){
     return (
         <>
             {
@@ -16,22 +24,22 @@ export default function ProductCard(){
                  * Large Media 
                  */
             }
-            <div className="w-[300px] h-auto relative hidden lg:flex items-center flex-col bg-primary px-6 py-6 gap-5 rounded-bl-2xl rounded-br-2xl rounded-tl-[100px] rounded-tr-[100px]">
+            <div className={`w-[300px] h-auto relative hidden lg:flex items-center flex-col bg-primary px-6 py-6 gap-5 rounded-bl-2xl rounded-br-2xl rounded-tl-[100px] rounded-tr-[100px] ${containerClassName ?? ''}`}>
                 <Image
                     src="/assets/images/product.webp"
                     alt="Bobba Union Logo"
                     width={250}
                     height={300}
-                    className="absolute -top-25 z-10" 
+                    className={`absolute -top-25 z-10 ${imageClassName ?? ''}`} 
                     priority
                 />
                 <span className="w-full h-[250px]"></span>
 
                 <span className="w-full block">
                     <h1 className="text-3xl text-white font-bold max-w-full line-clamp-2">
-                        Product Name
+                        {name ?? 'Product Name'}
                     </h1>
-                    <p className="text-xl text-white font-bold mt-3">PHP 39.00</p>
+                    <p className="text-xl text-white font-bold mt-3">{currency ?? 'PHP'} {price ?? '39.00'}</p>
                 </span>
 
                 <span className="w-full h-[2px] flex gap-2.5">
@@ -54,22 +62,22 @@ export default function ProductCard(){
                  * Small to Medium Media 
                  */
             }
-            <div className="w-[300px] md:w-[200px] h-auto relative flex lg:hidden items-center flex-col bg-primary px-6 md:px-3 py-6 gap-5 rounded-bl-2xl rounded-br-2xl rounded-tl-[100px] rounded-tr-[100px]">
+            <div className={`w-[300px] md:w-[200px] h-auto relative flex lg:hidden items-center flex-col bg-primary px-6 md:px-3 py-6 gap-5 rounded-bl-2xl rounded-br-2xl rounded-tl-[100px] rounded-tr-[100px] ${containerClassName ?? ''}`}>
                 <Image
                     src="/assets/images/product.webp"
                     alt="Bobba Union Logo"
                     width={170}
                     height={300}
-                    className="absolute -top-25 z-10" 
+                    className={`absolute -top-25 z-10 ${imageClassName ?? ''}`}
                     priority
                 />
                 <span className="w-full h-[150px]"></span>
 
                 <span className="w-full block">
                     <h1 className="text-2xl md:text-xl text-white font-bold max-w-full line-clamp-2">
-                        Product Name
+                        {name ?? 'Product Name'}
                     </h1>
-                    <p className="text-lg md:text-base text-white font-bold mt-3">PHP 39.00</p>
+                    <p className="text-lg md:text-base text-white font-bold mt-3">{currency ?? 'PHP'} {price ?? '39.00'}</p>
                 </span>
 
                 <span className="w-full h-[2px] flex gap-2.5">
