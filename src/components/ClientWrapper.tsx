@@ -3,6 +3,7 @@ import FloatingBobba from "@/components/FloatingBobba";
 import { gsap} from "@/lib/gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import ExploreSection from "./sections/ExploreSection";
 
 type ClientWrapperProps = {
     children: React.ReactNode;
@@ -23,6 +24,8 @@ export default function ClientWrapper({
          */
       }
 
+      const markerTrigger = true;
+
       // if(!bobbaRef.current) return;
 
       const LatestCreationTL  = gsap.timeline({
@@ -31,7 +34,6 @@ export default function ClientWrapper({
           start: '20% 80%',                       
           end: '70% 80%',
           scrub: 3,
-          markers: true,
           id: 'latest-creations',
         }
       });
@@ -50,13 +52,13 @@ export default function ClientWrapper({
         .to(
           ['.product-img-1', '.product-img-2', '.product-img-3'],
           {
-            x: "random(-15, 15)",
-            y: "random(-10, 10)",
-            rotation: "random(-10, 10)",
+            x: 'random(-15, 15)',
+            y: 'random(-10, 10)',
+            rotation: 'random(-10, 10)',
             duration: 1,
             repeat: 10,
             yoyo: true,
-            ease: "power2.out"
+            ease: 'power2.out'
           },
         ).
         to(
@@ -67,9 +69,77 @@ export default function ClientWrapper({
             rotation: 0,
             duration: 1,
             yoyo: true,
-            ease: "power2.out"
+            ease: 'power2.out'
           },
         );
+
+
+        gsap.from('.explore-bobba', {
+            xPercent: -60,
+            scale: -1,
+            opacity: 0,
+            duration: 4,
+            scrub: 3,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: '.explore-bobba',
+              start: 'top 80%',
+              end: 'bottom 80%',
+              scrub: 1,
+              markers: markerTrigger,
+              id: 'explore-bobba'
+            }
+        });
+
+        gsap.from('.offering-card-1', {
+          xPercent: -50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: 'back.out',
+          scrollTrigger: {
+            trigger: '.offering-card-1',
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: 1,
+            markers: markerTrigger,
+            id: 'card-1'
+          }
+        });
+
+        gsap.from('.offering-card-reversed-1', {
+          xPercent: 50,
+          opacity: 0,
+          duration: 1,
+          ease: 'back.out',
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: '.offering-card-reversed-1',
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: 1,
+            markers: markerTrigger,
+            id: 'card-reversed-1'
+          }
+        });
+
+        gsap.from('.offering-card-2', {
+          xPercent: -50,
+          opacity: 0,
+          duration: 1,
+          ease: 'back.out',
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: '.offering-card-2',
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: 1,
+            markers: markerTrigger,
+            id: 'card-2'
+          }
+        });
+
+        
   });
 
   return (
