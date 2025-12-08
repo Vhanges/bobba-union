@@ -26,6 +26,7 @@ export default function ClientWrapper({
 
       const LatestCreationMarker = false;
       const ExploreMarker = false;
+      const JoinUsMarker = true;
 
       // if(!bobbaRef.current) return;
 
@@ -137,6 +138,48 @@ export default function ClientWrapper({
             id: 'card-2'
           }
         });
+
+        
+        const JoinUsTL = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.join-us-section',
+            start: 'center 80%',
+            end: 'center 80%',
+            markers: JoinUsMarker,
+            id: 'join-us-section',
+            scrub: 3
+          }
+        });
+
+        JoinUsTL.
+          from(
+            '.join-us-section-header',
+            {
+              xPercent: -50,
+              opacity: 0,
+              duration: 1,
+              ease: 'power2.inOut',
+            }
+          ).
+          from(
+            '.join-us-section-img',
+            {
+              opacity: 0,
+              duration: 1,
+              ease: 'power2.inOut',
+            }
+          ).
+          from(
+            '.join-us-bobba',
+            {
+              xPercent: -60,
+              scale: -1,
+              opacity: 0,
+              duration: 2,
+              ease: 'power2.out',
+            },
+            '+=1'
+          )
 
         
   });
