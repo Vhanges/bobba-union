@@ -24,8 +24,8 @@ export default function ClientWrapper({
          */
       }
 
-      const LatestCreationMarker = true;
-      const ExploreMarker = true;
+      const LatestCreationMarker = false;
+      const ExploreMarker = false;
 
       // if(!bobbaRef.current) return;
 
@@ -103,7 +103,6 @@ export default function ClientWrapper({
             trigger: '.offering-card-1',
             start: 'center 80%',
             end: 'center 50%',
-            scrub: 1,
             markers: ExploreMarker,
             id: 'card-1'
           }
@@ -119,7 +118,6 @@ export default function ClientWrapper({
             trigger: '.offering-card-reversed-1',
             start: 'center 80%',
             end: 'center 50%',
-            scrub: 1,
             markers: ExploreMarker,
             id: 'card-reversed-1'
           }
@@ -135,7 +133,6 @@ export default function ClientWrapper({
             trigger: '.offering-card-2',
             start: 'center 80%',
             end: 'center 50%',
-            scrub: 1,
             markers: ExploreMarker,
             id: 'card-2'
           }
