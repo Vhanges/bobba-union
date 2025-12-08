@@ -24,7 +24,8 @@ export default function ClientWrapper({
          */
       }
 
-      const markerTrigger = true;
+      const LatestCreationMarker = true;
+      const ExploreMarker = true;
 
       // if(!bobbaRef.current) return;
 
@@ -35,6 +36,7 @@ export default function ClientWrapper({
           end: '70% 80%',
           scrub: 3,
           id: 'latest-creations',
+          markers: LatestCreationMarker,
         }
       });
 
@@ -86,7 +88,7 @@ export default function ClientWrapper({
               start: 'top 80%',
               end: 'bottom 80%',
               scrub: 1,
-              markers: markerTrigger,
+              markers: ExploreMarker,
               id: 'explore-bobba'
             }
         });
@@ -99,10 +101,10 @@ export default function ClientWrapper({
           ease: 'back.out',
           scrollTrigger: {
             trigger: '.offering-card-1',
-            start: 'top 80%',
-            end: 'top 50%',
+            start: 'center 80%',
+            end: 'center 50%',
             scrub: 1,
-            markers: markerTrigger,
+            markers: ExploreMarker,
             id: 'card-1'
           }
         });
@@ -115,10 +117,10 @@ export default function ClientWrapper({
           stagger: 0.2,
           scrollTrigger: {
             trigger: '.offering-card-reversed-1',
-            start: 'top 80%',
-            end: 'top 50%',
+            start: 'center 80%',
+            end: 'center 50%',
             scrub: 1,
-            markers: markerTrigger,
+            markers: ExploreMarker,
             id: 'card-reversed-1'
           }
         });
@@ -131,10 +133,10 @@ export default function ClientWrapper({
           stagger: 0.2,
           scrollTrigger: {
             trigger: '.offering-card-2',
-            start: 'top 80%',
-            end: 'top 50%',
+            start: 'center 80%',
+            end: 'center 50%',
             scrub: 1,
-            markers: markerTrigger,
+            markers: ExploreMarker,
             id: 'card-2'
           }
         });
