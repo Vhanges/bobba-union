@@ -17,18 +17,18 @@ export default function HeroSection(
                  * Medium to Large Media 
                  */
             }
-            <section className={`"w-full hidden relative md:grid place-items-center justify px-5 lg:px-[50px] xl:px-[100px] overflow-hidden" ${className ?? ''}`}>
+            <section className={`"w-full hidden relative md:grid place-items-center justify px-5 md:px-[50px] md:py-[100px] lg:px-[50px] xl:px-[100px] overflow-hidden" ${className ?? ''}`}>
                 
                 <FloatingBobba
-                    className="rotating-bounce top-14 right-[500px]"
+                    className="md:hidden lg:hidden rotating-bounce top-14 right-[500px]"
                 />
 
                 <FloatingBobba
-                    className="rotating-bounce bottom-20 right-[400px]"
+                    className="md:hidden lg:hidden rotating-bounce bottom-20 right-[400px]"
                 />
 
                 <FloatingBobba
-                    className="rotating-bounce top-40 right-[100px]"
+                    className="md:hidden lg:hidden rotating-bounce top-40 right-[100px]"
                 />
 
                 <div className="grid grid-cols-[625px_550px] gap-10">
@@ -50,7 +50,7 @@ export default function HeroSection(
                     </div>
 
                     {/* Hero Image */}
-                    <div className="relative h-[600px] w-[550px]">
+                    <div className="hidden xl:block relative h-[600px] w-[550px]">
                         <Image
                             src="/assets/images/hero-image.webp"
                             alt="Hero Product"
@@ -61,6 +61,15 @@ export default function HeroSection(
                             className="absolute -right-2 bottom-15 -rotate-15 object-contain slide-up"
                         />
                     </div>
+
+                    <Image
+                        src="/assets/images/hero-image.webp"
+                        alt="Hero Product"
+                        width={300}
+                        height={490}
+                        priority 
+                        className=" lg:hidden absolute top-0 -right-47"
+                    />
 
                 </div>
             </section>
