@@ -14,7 +14,7 @@ export default function ExploreSection({ className }: ExploreSectionProps){
                     <h1 className="text-5xl text-primary text-center font-extrabold">    
                         Explore What&apos;s inside
                     </h1>
-                     <FloatingBobba className="explore-bobba absolute -top-7 -right-30 h-25 w-25"/>
+                     <FloatingBobba className="explore-bobba absolute -top-15 -right-25 h-25 w-25"/>
                 </span> 
 
                 <div className="flex flex-col justify-around gap-[40px] md:gap-[150px] ">

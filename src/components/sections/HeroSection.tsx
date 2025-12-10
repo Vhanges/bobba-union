@@ -17,18 +17,18 @@ export default function HeroSection(
                  * Medium to Large Media 
                  */
             }
-            <section className={`"w-full hidden relative md:grid place-items-center justify px-5 md:px-[50px] md:py-[100px] lg:px-[50px] xl:px-[100px] overflow-hidden" ${className ?? ''}`}>
+            <section className={`"w-full hidden relative md:grid place-items-center justify px-5 md:px-[50px] md:py-[50px] xl:py-[0px] overflow-hidden" ${className ?? ''}`}>
                 
                 <FloatingBobba
-                    className="md:hidden lg:hidden rotating-bounce top-14 right-[500px]"
+                    className="md:hidden lg:hidden xl:block rotating-bounce top-14 right-[500px]"
                 />
 
                 <FloatingBobba
-                    className="md:hidden lg:hidden rotating-bounce bottom-20 right-[400px]"
+                    className="md:hidden lg:hidden xl:block rotating-bounce bottom-20 right-[400px]"
                 />
 
                 <FloatingBobba
-                    className="md:hidden lg:hidden rotating-bounce top-40 right-[100px]"
+                    className="md:hidden lg:hidden xl:block rotating-bounce top-40 right-[100px]"
                 />
 
                 <div className="grid grid-cols-[625px_550px] gap-10">
