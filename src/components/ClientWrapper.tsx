@@ -26,7 +26,7 @@ export default function ClientWrapper({
 
       const LatestCreationMarker = false;
       const ExploreMarker = false;
-      const JoinUsMarker = true;
+      const JoinUsMarker = false;
 
       // if(!bobbaRef.current) return;
 
@@ -79,6 +79,7 @@ export default function ClientWrapper({
 
         gsap.from('.explore-bobba', {
             xPercent: -60,
+            yPercent: 50,
             scale: -1,
             opacity: 0,
             duration: 4,
@@ -158,7 +159,7 @@ export default function ClientWrapper({
               xPercent: -50,
               opacity: 0,
               duration: 1,
-              ease: 'power2.inOut',
+              ease: 'power1.inOut',
             }
           ).
           from(
