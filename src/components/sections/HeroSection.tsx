@@ -20,31 +20,31 @@ export default function HeroSection(
             <section className={`"w-full hidden relative md:grid place-items-center justify px-5 md:px-[50px] md:py-[50px] xl:py-[0px] overflow-hidden" ${className ?? ''}`}>
                 
                 <FloatingBobba
-                    className="md:hidden lg:hidden xl:block rotating-bounce top-14 right-[500px]"
+                    className="md:hidden lg:hidden xl:block hero-floating-bobba top-14 right-[500px]"
                 />
 
                 <FloatingBobba
-                    className="md:hidden lg:hidden xl:block rotating-bounce bottom-20 right-[400px]"
+                    className="md:hidden lg:hidden xl:block hero-floating-bobba bottom-20 right-[400px]"
                 />
 
                 <FloatingBobba
-                    className="md:hidden lg:hidden xl:block rotating-bounce top-40 right-[100px]"
+                    className="md:hidden lg:hidden xl:block hero-floating-bobba top-40 right-[100px]"
                 />
 
                 <div className="grid grid-cols-[625px_550px] gap-10">
                     
                     {/* Hero Text and CTA */}
                     <div className="flex flex-col justify-center">
-                        <h1 className="text-6xl text-primary font-extrabold">     
+                        <h1 className="text-6xl text-primary font-extrabold hero-text">     
                             Your Daily Dose of
                         </h1>
-                        <h2 className="text-6xl text-primary font-pacifico mt-3">
+                        <h2 className="text-6xl text-primary font-pacifico mt-3 hero-text">
                             Creamy Goodness
                         </h2>
-                        <p className="text-3xl mt-7 font-bold">
+                        <p className="text-3xl mt-7 font-bold hero-text">
                             Refreshing, creamy, and <br/> irresistibly smooth.
                         </p>
-                        <CTAButton href="/" className="text-2xl text-center py-[20px] px-[50px] mt-10">
+                        <CTAButton href="/" className="text-2xl text-center py-[20px] px-[50px] mt-10 hero-cta">
                             Explore More
                         </CTAButton>
                     </div>
@@ -58,7 +58,7 @@ export default function HeroSection(
                             height={350}
                             priority
                             quality={85}
-                            className="absolute -right-2 bottom-15 -rotate-15 object-contain slide-up"
+                            className="absolute -right-2 bottom-15 -rotate-15 object-contain hero-image"
                         />
                     </div>
 
@@ -82,18 +82,18 @@ export default function HeroSection(
                  */
             }
             <section className="h-[700px] relative flex flex-col md:hidden justify-center items-start py-3 px-5 pb-[100px] gap-2 overflow-hidden">
-                <h1 className="text-5xl text-primary font-extrabold">    
+                <h1 className="text-5xl text-primary font-extrabold hero-text">    
                     Your Daily <br/> Dose of
                 </h1>
-                <h2 className="text-2xl text-primary font-pacifico">
+                <h2 className="text-2xl text-primary font-pacifico hero-text">
                     Creamy Goodness
                 </h2>
 
-                <p className="text-xl mt-7 font-bold">
+                <p className="text-xl mt-7 font-bold hero-text">
                     Refreshing, creamy, and <br/> irresistibly smooth.
                 </p>
 
-                <CTAButton href="/" className="w-70 px-5 mt-10">
+                <CTAButton href="/" className="w-70 px-5 mt-10 hero-cta">
                     Explore More
                 </CTAButton>
 
@@ -103,7 +103,7 @@ export default function HeroSection(
                     width={300}
                     height={490}
                     priority 
-                    className="absolute -right-47"
+                    className="absolute -right-47 hero-image-mobile"
                 />
             </section>           
         </>
