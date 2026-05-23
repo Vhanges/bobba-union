@@ -14,7 +14,7 @@ export default function TestimonialCard({imgSrc, children}: TestimonialCardProps
                     src={imgSrc}
                     alt="Bobba Union Logo"
                     fill
-                    className="-z-1 object-hidden"
+                    className="z-1 object-hidden"
                     priority
                 />
             </div>

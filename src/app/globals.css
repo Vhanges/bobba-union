@@ -143,3 +143,7 @@ html.lenis, html.lenis body {
   }
 }
 
+main {
+  background-color: var(--color-background);
+}
+
