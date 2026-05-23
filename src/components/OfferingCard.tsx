@@ -28,7 +28,7 @@ export default function OfferingCard( {imgSrc, title, description, isReversed, s
                 </div>
 
                 <div className="h-auto flex flex-col gap-10">
-                    <div className="h-auto w-full bg-primary flex items-center justify-center py-5 px-5">
+                    <div className="h-auto w-full bg-primary flex items-center justify-center py-5 px-5 rounded-2xl">
                         <h1 className="text-4xl text-white font-semibold">
                             {title}
                         </h1>
@@ -48,7 +48,7 @@ export default function OfferingCard( {imgSrc, title, description, isReversed, s
             }
             <div className="w-full h-auto flex flex-col items-center gap-10 lg:hidden">
                 <div className="h-auto flex flex-col gap-10">
-                    <div className="h-auto w-full bg-primary flex items-center justify-center py-5 px-5">
+                    <div className="h-auto w-full bg-primary flex items-center justify-center py-5 px-5 rounded-2xl">
                         <h1 className="text-3xl text-white font-semibold">
                             {title}
                         </h1>
