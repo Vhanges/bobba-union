@@ -65,7 +65,7 @@ export default function OfferingCard( {imgSrc, title, description, isReversed, s
                         src={imgSrc}
                         alt="Bobba Union Logo"
                         fill
-                        className="-z-1 object-fill"
+                        className="z-1 object-fill"
                         priority
                     />
                 </div>
