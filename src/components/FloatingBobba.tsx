@@ -14,7 +14,7 @@ const FloatingBobba = forwardRef<HTMLImageElement, FloatingBobbaProps>(
                 alt="Bobba Union Logo"
                 height={160}
                 width={160}
-                className={`absolute -z-1 object-fill ${className ?? ""}`}
+                className={`absolute z-1 object-fill ${className ?? ""}`}
                 priority
             />
         );

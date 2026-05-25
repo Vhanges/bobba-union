@@ -108,17 +108,18 @@ export default function ClientWrapper({
           scrollTrigger: {
             trigger: '.latest-creation-section',
             start: 'top 80%',
-            end: 'bottom 20%',
+            end: 'top 50%',
             scrub: 1,
             id: 'latest-creations',
             markers: LatestCreationMarker,
           }
         });
 
+
         LatestCreationTL.from('.latest-creation-bobba', {
-          yPercent: 80,
+          yoyoEasePercent: 80,
           scale: 0.3,
-          opacity: 0,
+          opacity: 1,
           rotation: 45,
           ease: 'back.out(1.7)'
         });
@@ -127,7 +128,7 @@ export default function ClientWrapper({
           scrollTrigger: {
             trigger: '.explore-section',
             start: 'top 80%',
-            end: 'center 70%',
+            end: 'top 70%',
             scrub: 1,
             markers: ExploreMarker,
             id: 'explore-bobba',
@@ -139,13 +140,11 @@ export default function ClientWrapper({
           xPercent: -50,
           yPercent: 0,
           scale: 0,
-          opacity: 0,
           ease: 'back.out(1.5)',
         }, {
           xPercent: 0,
           yPercent: 0,
           scale: 1,
-          opacity: 1,
           duration: 1.2,
         });
 
