@@ -38,16 +38,25 @@ export default function ClientWrapper({
       const LatestCreationMarker = false;
       const ExploreMarker = false;
       const JoinUsMarker = false;
+      const TestimonialsMarker = false;
 
       // Hero animations
-      gsap.from('.hero-floating-bobba', {
+      const heroFloatingBobbaIntro = gsap.from('.hero-floating-bobba', {
         yPercent: -200,
         opacity: 0,
-        rotation: 180,
         scale: 0.5,
         duration: 1.5,
         stagger: 0.2,
         ease: 'bounce.out',
+      });
+
+      const heroFloatingBobbaSpin = gsap.to('.hero-floating-bobba', {
+        rotation: '+=360',
+        duration: 2,
+        repeat: -1,
+        ease: 'none',
+        transformOrigin: '50% 50%',
+        force3D: true,
       });
 
       gsap.from('.hero-text', {
@@ -208,6 +217,15 @@ const OfferingCard1TL = gsap.timeline({
           }
         });
 
+        const TestimonialsTL = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.testimonial-card',
+            start: 'top 85%',
+            markers: TestimonialsMarker,
+            id: 'testimonials-bounce',
+          }
+        });
+
         JoinUsTL
           .from('.join-us-section-header', {
             yPercent: 80,
@@ -232,6 +250,13 @@ const OfferingCard1TL = gsap.timeline({
             ease: 'back.out(2)',
           }, '-=0.8');
 
+        TestimonialsTL.from('.testimonial-card', {
+          yPercent: 80,
+          duration: .5,
+          stagger: 0.2,
+          ease: 'ease.in',
+        });
+
         return () => {
           LatestCreationTL.kill();
           ExploreTL.kill();
@@ -239,6 +264,7 @@ const OfferingCard1TL = gsap.timeline({
           OfferingCardReversed1TL.kill();
           OfferingCard2TL.kill();
           JoinUsTL.kill();
+          TestimonialsTL.kill();
         };
       });
 
@@ -309,10 +335,9 @@ const OfferingCard1TL = gsap.timeline({
 
         OfferingCard1TL.from('.offering-card-1', {
           opacity: 0,
-          duration: 0.8,
+          duration: 0.5,
           ease: 'back.out(2)',
           xPercent: -30,
-          yPercent: 30,
         });
 
         const OfferingCardReversed1TL = gsap.timeline({
@@ -326,10 +351,9 @@ const OfferingCard1TL = gsap.timeline({
 
         OfferingCardReversed1TL.from('.offering-card-reversed-1', {
           opacity: 0,
-          duration: 0.8,
+          duration: 0.5,
           ease: 'back.out(2)',
           xPercent: 30,
-          yPercent: 30,
         });
 
         const OfferingCard2TL = gsap.timeline({
@@ -343,10 +367,9 @@ const OfferingCard1TL = gsap.timeline({
 
         OfferingCard2TL.from('.offering-card-2', {
           opacity: 0,
-          duration: 0.8,
+          duration: 0.5,
           ease: 'back.out(2)',
           xPercent: -30,
-          yPercent: 30,
         });
 
         const JoinUsTL = gsap.timeline({
@@ -392,6 +415,8 @@ const OfferingCard1TL = gsap.timeline({
       });
 
       return () => {
+        heroFloatingBobbaIntro.kill();
+        heroFloatingBobbaSpin.kill();
         productShake?.kill();
         mm.revert();
       };
