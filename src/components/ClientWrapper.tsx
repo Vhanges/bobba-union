@@ -252,9 +252,10 @@ const OfferingCard1TL = gsap.timeline({
 
         TestimonialsTL.from('.testimonial-card', {
           yPercent: 80,
+          opacity: 0,
           duration: .5,
           stagger: 0.2,
-          ease: 'ease.in',
+          ease: 'ease.inOut',
         });
 
         return () => {
