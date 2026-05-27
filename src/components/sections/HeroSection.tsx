@@ -19,17 +19,7 @@ export default function HeroSection(
             }
             <section className={`"w-full hidden relative md:grid place-items-center justify px-5 md:px-[50px] md:py-[50px] xl:py-[0px] overflow-hidden" ${className ?? ''}`}>
                 
-                <FloatingBobba
-                    className="md:hidden lg:hidden xl:block hero-floating-bobba top-14 right-[500px]"
-                />
 
-                <FloatingBobba
-                    className="md:hidden lg:hidden xl:block hero-floating-bobba bottom-20 right-[400px]"
-                />
-
-                <FloatingBobba
-                    className="md:hidden lg:hidden xl:block hero-floating-bobba top-40 right-[100px]"
-                />
 
                 <div className="grid grid-cols-[625px_550px] gap-10">
                     
@@ -50,7 +40,20 @@ export default function HeroSection(
                     </div>
 
                     {/* Hero Image */}
-                    <div className="hidden xl:block relative h-[600px] w-[550px]">
+                    <div className="relative hidden md:block h-[600px] w-[550px] overflow-visible">
+                        <FloatingBobba
+                            className="md:hidden lg:hidden xl:block hero-floating-bobba top-14 right-[300px]"
+                        />
+
+
+                        <FloatingBobba
+                            className="z-2 md:hidden lg:hidden xl:block hero-floating-bobba top-40 right-[0px]"
+                        />
+
+                        <FloatingBobba
+                            className="md:hidden lg:hidden xl:block hero-floating-bobba bottom-20 right-[200px]"
+                        />
+
                         <Image
                             src="/assets/images/hero-image.webp"
                             alt="Hero Product"
@@ -58,18 +61,18 @@ export default function HeroSection(
                             height={350}
                             priority
                             quality={85}
-                            className="absolute -right-2 bottom-15 -rotate-15 object-contain hero-image"
+                            className="z-1 hidden xl:block absolute -right-2 bottom-15 -rotate-15 object-contain hero-image"
+                        />
+
+                        <Image
+                            src="/assets/images/hero-image.webp"
+                            alt="Hero Product"
+                            width={300}
+                            height={490}
+                            priority
+                            className="z-1 absolute top-0 -right-47 lg:hidden"
                         />
                     </div>
-
-                    <Image
-                        src="/assets/images/hero-image.webp"
-                        alt="Hero Product"
-                        width={300}
-                        height={490}
-                        priority 
-                        className=" lg:hidden absolute top-0 -right-47"
-                    />
 
                 </div>
             </section>
