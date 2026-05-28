@@ -72,6 +72,18 @@ html.lenis, html.lenis body {
   animation-delay: 0.8s, 1.5s;
 }
 
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.animate-reverse {
+  animation-direction: reverse !important;
+}
+
+.pause-on-hover:hover .animate-marquee {
+  animation-play-state: paused !important;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -140,6 +152,15 @@ html.lenis, html.lenis body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }
 
