@@ -11,7 +11,7 @@ export default function ExploreSection({ className }: ExploreSectionProps){
         <>
             <section  className={`h-auto relative flex flex-col justify-start items-center py-5 px-[20px] md:px-[100px] lg:px-[50px] md:pt-20 pb-[150px] gap-[50px] md:gap-[150px] overflow-hidden ${className ?? ''}`}>
                 <span className="relative inline-block">
-                    <h1 className="text-5xl text-primary text-center font-extrabold">    
+                    <h1 className="text-5xl text-primary text-justify font-extrabold">    
                         Explore What&apos;s inside
                     </h1>
                      <FloatingBobba className="explore-bobba absolute -top-15 -right-25 h-25 w-25"/>

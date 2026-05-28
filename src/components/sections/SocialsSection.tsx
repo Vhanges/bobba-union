@@ -8,14 +8,16 @@ type SocialsSectionProps = {
 export default function SocialsSection({ className }: SocialsSectionProps){
     return (
             <section className={`h-auto relative flex flex-col justify-start items-center py-5 px-5 md:pt-20 pb-[150px] gap-[140px] overflow-hidden ${className ?? ''}`}>
-                <span className="block">
+                <div className="flex flex-col items-center gap-5">
                     <h1 className="text-5xl text-primary text-justify font-extrabold">    
                         We’d love to hear from you
                     </h1>
-                    <h2 className="w-auto text-2xl text-justify font-bold mt-7">
-                        Connect with us on Facebook, Instagram, TikTok,<br/> and X for updates, support, and behind-the-scenes content
+
+                    <h2 className="w-full md:w-[70%] text-2xl text-left md:text-center font-bold mt-7">
+                        Connect with us on Facebook, Instagram, TikTok,
+                        and X for updates, support, and behind-the-scenes content
                     </h2>
-                </span> 
+                </div> 
 
                 <div className="flex flex-row justify-around gap-[25px] md:gap-[50px] lg:gap-[100px]">
                     <span className="flex flex-col items-center">
