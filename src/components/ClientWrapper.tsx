@@ -41,18 +41,37 @@ export default function ClientWrapper({
       const TestimonialsMarker = false;
 
       // Hero animations
-      const heroFloatingBobbaIntro = gsap.from('.hero-floating-bobba', {
+      const heroFloatingBobbaIntro = gsap.from(
+        '.hero-floating-bobba1, .hero-floating-bobba2, .hero-floating-bobba3',
+        {
         yPercent: -200,
         opacity: 0,
         scale: 0.5,
         duration: 1.5,
         stagger: 0.2,
         ease: 'bounce.out',
-      });
+        },
+      );
 
-      const heroFloatingBobbaSpin = gsap.to('.hero-floating-bobba', {
+      const heroFloatingBobbaSpin1 = gsap.to('.hero-floating-bobba1', {
+        rotation: '-=360',
+        duration: 10,
+        repeat: -1,
+        ease: 'none',
+        transformOrigin: '50% 50%',
+        force3D: true,
+      });
+      const heroFloatingBobbaSpin2 = gsap.to('.hero-floating-bobba2', {
         rotation: '+=360',
-        duration: 2,
+        duration: 10,
+        repeat: -1,
+        ease: 'none',
+        transformOrigin: '50% 50%',
+        force3D: true,
+      });
+      const heroFloatingBobbaSpin3 = gsap.to('.hero-floating-bobba3', {
+        rotation: '-=360',
+        duration: 10,
         repeat: -1,
         ease: 'none',
         transformOrigin: '50% 50%',
@@ -417,7 +436,9 @@ const OfferingCard1TL = gsap.timeline({
 
       return () => {
         heroFloatingBobbaIntro.kill();
-        heroFloatingBobbaSpin.kill();
+        heroFloatingBobbaSpin1.kill();
+        heroFloatingBobbaSpin2.kill();
+        heroFloatingBobbaSpin3.kill();
         productShake?.kill();
         mm.revert();
       };

@@ -42,16 +42,16 @@ export default function HeroSection(
                     {/* Hero Image */}
                     <div className="relative hidden md:block h-[600px] w-[550px] overflow-visible">
                         <FloatingBobba
-                            className="hero-floating-bobba top-14 right-[300px]"
+                            className="hero-floating-bobba1 top-14 right-[300px]"
                         />
 
 
                         <FloatingBobba
-                            className="z-2 hero-floating-bobba top-40 right-[0px]"
+                            className="z-2 hero-floating-bobba2 top-40 right-[0px]"
                         />
 
                         <FloatingBobba
-                            className="hero-floating-bobba bottom-20 right-[200px]"
+                            className="hero-floating-bobba3 bottom-20 right-[200px]"
                         />
 
                         <Image
